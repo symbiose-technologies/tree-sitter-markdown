@@ -1,4 +1,4 @@
-;; From nvim-treesitter/nvim-treesitter
+;From nvim-treesitter/nvim-treesitter
 [
   (code_span)
   (link_title)
@@ -29,10 +29,7 @@
   (hard_line_break)
 ] @string.escape
 
-; ")" not part of query because of
-; https://github.com/nvim-treesitter/nvim-treesitter/issues/2206
-; TODO: Find better fix for this
 (image ["!" "[" "]" "("] @punctuation.delimiter)
 (inline_link ["[" "]" "("] @punctuation.delimiter)
 (shortcut_link ["[" "]"] @punctuation.delimiter)
-(wiki_link ["[" "|" "]"] @punctuation.delimiter)
+;(wiki_link ["[" "|" "]"] @punctuation.delimiter)
