@@ -1,40 +1,12 @@
 ================================================================================
-Example 177 - https://github.github.com/gfm/#example-177
-================================================================================
-[
-foo
-]: /url
-bar
-
---------------------------------------------------------------------------------
-
-(document
-  (link_reference_definition
-    (link_label)
-    (link_destination))
-  (paragraph))
-
-================================================================================
-Example 354 - https://github.github.com/gfm/#example-354
-================================================================================
-<a href="`">`
-
---------------------------------------------------------------------------------
-
-(document
-  (paragraph
-    (html_tag)))
-
-================================================================================
 Example 355 - https://github.github.com/gfm/#example-355
 ================================================================================
 `<http://foo.bar.`baz>`
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (code_span)))
+(inline
+  (code_span))
 
 ================================================================================
 Example 363 - https://github.github.com/gfm/#example-363
@@ -43,18 +15,7 @@ Example 363 - https://github.github.com/gfm/#example-363
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph))
-
-================================================================================
-Example 380 - https://github.github.com/gfm/#example-380
-================================================================================
-_foo bar _
-
---------------------------------------------------------------------------------
-
-(document
-  (paragraph))
+(inline)
 
 ================================================================================
 Example 389 - https://github.github.com/gfm/#example-389
@@ -63,8 +24,7 @@ a**"foo"**
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph))
+(inline)
 
 ================================================================================
 Example 394 - https://github.github.com/gfm/#example-394
@@ -73,8 +33,7 @@ a__"foo"__
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph))
+(inline)
 
 ================================================================================
 Example 395 - https://github.github.com/gfm/#example-395
@@ -83,8 +42,7 @@ foo__bar__
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph))
+(inline)
 
 ================================================================================
 Example 397 - https://github.github.com/gfm/#example-397
@@ -93,8 +51,7 @@ Example 397 - https://github.github.com/gfm/#example-397
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph))
+(inline)
 
 ================================================================================
 Example 400 - https://github.github.com/gfm/#example-400
@@ -103,8 +60,7 @@ Example 400 - https://github.github.com/gfm/#example-400
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph))
+(inline)
 
 ================================================================================
 Example 401 - https://github.github.com/gfm/#example-401
@@ -113,8 +69,7 @@ Example 401 - https://github.github.com/gfm/#example-401
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph))
+(inline)
 
 ================================================================================
 Example 406 - https://github.github.com/gfm/#example-406
@@ -123,8 +78,7 @@ __foo bar __
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph))
+(inline)
 
 ================================================================================
 Example 411 - https://github.github.com/gfm/#example-411
@@ -133,9 +87,8 @@ __foo__bar__baz__
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (strong_emphasis)))
+(inline
+  (strong_emphasis))
 
 ================================================================================
 Example 420 - https://github.github.com/gfm/#example-420
@@ -144,10 +97,9 @@ Example 420 - https://github.github.com/gfm/#example-420
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (emphasis
-      (strong_emphasis))))
+(inline
+  (emphasis
+    (strong_emphasis)))
 
 ================================================================================
 Example 421 - https://github.github.com/gfm/#example-421
@@ -156,9 +108,8 @@ Example 421 - https://github.github.com/gfm/#example-421
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (emphasis)))
+(inline
+  (emphasis))
 
 ================================================================================
 Example 424 - https://github.github.com/gfm/#example-424
@@ -167,10 +118,9 @@ Example 424 - https://github.github.com/gfm/#example-424
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (emphasis
-      (strong_emphasis))))
+(inline
+  (emphasis
+    (strong_emphasis)))
 
 ================================================================================
 Example 438 - https://github.github.com/gfm/#example-438
@@ -179,23 +129,9 @@ Example 438 - https://github.github.com/gfm/#example-438
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (strong_emphasis
-      (emphasis))))
-
-================================================================================
-Example 478 - https://github.github.com/gfm/#example-478
-================================================================================
-*foo _bar* baz_
-
---------------------------------------------------------------------------------
-
-(document
-  (paragraph
-    (emphasis
-      (emphasis_delimiter)
-      (emphasis_delimiter))))
+(inline
+  (strong_emphasis
+    (emphasis))))
 
 ================================================================================
 Example 487 - https://github.github.com/gfm/#example-487
@@ -204,14 +140,13 @@ Example 487 - https://github.github.com/gfm/#example-487
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (emphasis
-      (emphasis_delimiter)
-      (code_span
-        (code_span_delimiter)
-        (code_span_delimiter))
-      (emphasis_delimiter))))
+(inline
+  (emphasis
+    (emphasis_delimiter)
+    (code_span
+      (code_span_delimiter)
+      (code_span_delimiter))
+    (emphasis_delimiter)))
 
 ================================================================================
 Example 488 - https://github.github.com/gfm/#example-488
@@ -220,14 +155,13 @@ _a `_`_
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (emphasis
-      (emphasis_delimiter)
-      (code_span
-        (code_span_delimiter)
-        (code_span_delimiter))
-      (emphasis_delimiter))))
+(inline
+  (emphasis
+    (emphasis_delimiter)
+    (code_span
+      (code_span_delimiter)
+      (code_span_delimiter))
+    (emphasis_delimiter)))
 
 ================================================================================
 Example 524 - https://github.github.com/gfm/#example-524
@@ -236,21 +170,20 @@ Example 524 - https://github.github.com/gfm/#example-524
 
 --------------------------------------------------------------------------------
 
-(document
-  (inline_link
-    (link_text
-      (emphasis
+(inline
+  (link_text
+    (emphasis
+      (emphasis_delimiter)
+      (strong_emphasis
         (emphasis_delimiter)
-        (strong_emphasis
-          (emphasis_delimiter)
-          (emphasis_delimiter)
-          (emphasis_delimiter)
-          (emphasis_delimiter))
-        (code_span
-          (code_span_delimiter)
-          (code_span_delimiter))
-        (emphasis_delimiter)))
-    (link_destination)))
+        (emphasis_delimiter)
+        (emphasis_delimiter)
+        (emphasis_delimiter))
+      (code_span
+        (code_span_delimiter)
+        (code_span_delimiter))
+      (emphasis_delimiter)))
+  (link_destination))
 
 ================================================================================
 Example 538 - https://github.github.com/gfm/#example-538
@@ -261,17 +194,16 @@ Example 538 - https://github.github.com/gfm/#example-538
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (full_reference_link
-      (link_text
-        (emphasis
-          (strong_emphasis)
-          (code_span)))
-      (link_label)))
-  (link_reference_definition
-    (link_label)
-    (link_destination)))
+(inline
+  (full_reference_link
+    (link_text
+      (emphasis
+        (strong_emphasis)
+        (code_span)))
+    (link_label)))
+(link_reference_definition
+  (link_label)
+  (link_destination))
 
 ================================================================================
 Example 560 - https://github.github.com/gfm/#example-560
@@ -284,9 +216,7 @@ Example 560 - https://github.github.com/gfm/#example-560
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph)
-  (paragraph))
+(inline)
 
 ================================================================================
 Example 588 - https://github.github.com/gfm/#example-588
@@ -295,11 +225,10 @@ Example 588 - https://github.github.com/gfm/#example-588
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (image
-      (image_description)
-      (link_destination))))
+(inline
+  (image
+    (image_description)
+    (link_destination)))
 
 ================================================================================
 Example 635 - https://github.github.com/gfm/#example-635
@@ -309,6 +238,5 @@ _boolean zoop:33=zoop:33 />
 
 --------------------------------------------------------------------------------
 
-(document
-  (paragraph
-    (html_tag)))
+(inline
+  (html_tag))

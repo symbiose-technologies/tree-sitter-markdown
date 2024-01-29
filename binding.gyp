@@ -4,16 +4,20 @@
       "target_name": "tree_sitter_markdown_binding",
       "include_dirs": [
         "<!(node -e \"require('nan')\")",
-        "src"
+        "tree-sitter-markdown/src",
+        "tree-sitter-markdown-inline/src",
       ],
       "sources": [
-        "bindings/node/binding.cc",
-        "src/parser.c",
-        "src/scanner.cc"
+        "tree-sitter-markdown/src/parser.c",
+        "tree-sitter-markdown/src/scanner.c",
+        "tree-sitter-markdown-inline/src/parser.c",
+        "tree-sitter-markdown-inline/src/scanner.c",
+        "bindings/node/binding.cc"
       ],
       "cflags_c": [
-        "-std=c99",
+        "-std=c99"
       ]
     }
   ]
 }
+
